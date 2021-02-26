@@ -6,17 +6,16 @@ import TodoScreen from '../Screens/Notes/Index';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import Settings from '../Screens/Settings/Index';
-import LoginScreen from '../Screens/LoginSignup/LoginScreen';
 
 const BottomTab = createMaterialBottomTabNavigator();
 
-const ButtonNav: React.FC<{}> = () => {
+const BottomNav: React.FC<{}> = () => {
   const [color, setcolor] = React.useState('white');
   return (
     <BottomTab.Navigator initialRouteName="Home" backBehavior="initialRoute">
       <BottomTab.Screen
         name="Home"
-        component={LoginScreen}
+        component={HomeScreen}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: () => (
@@ -54,4 +53,4 @@ const ButtonNav: React.FC<{}> = () => {
     </BottomTab.Navigator>
   );
 };
-export default ButtonNav;
+export default BottomNav;

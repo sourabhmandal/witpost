@@ -8,9 +8,14 @@ import {
   FlatList,
 } from 'react-native';
 import React from 'react';
-const image = require('../../../assets/edition.png');
+
+import {useNavigation} from '@react-navigation/native';
+import {Auth} from 'aws-amplify';
 
 const HomeScreen: React.FC<{}> = () => {
+  const image = require('../../../assets/edition.png');
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Image source={image} style={styles.image} />
